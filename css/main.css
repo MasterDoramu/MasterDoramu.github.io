@@ -50,6 +50,7 @@ body{
     background: #87509C;
     height: 50px;
     padding: 0 20px;
+    z-index: 10;
 }
 
 
@@ -368,7 +369,7 @@ line-height: 1.5em;
 	margin-bottom: 65px;
 }
 .portfolio-header__function:not(:last-child){
-	margin-right: 9px;
+	margin: 0 9px 0 0;
 	 
 }
 .portfolio-header__function{
@@ -785,6 +786,63 @@ padding: 120px 0 135px;
 	background: #fff;
 }
 
+
+
+
+@media screen and (max-width: 480px) {
+
+	.team-commands-item__text {
+    	max-width: 100%; 
+	}
+	.portfolio-header__subtitle{
+		width: 100%; 
+	}
+
+	.peole-say__item-content-recall {
+    max-width: 100%;
+	}
+    
+	.contacts-forma__button {
+		padding: 28px 70px;
+	}
+
+	.portfolio_button {
+		padding: 28px 25px;
+	}
+	.peole-say__item{
+		
+		display: block;
+
+	}
+
+	.header__title {
+		margin: 80px auto 0;
+		font-size: 30px;
+	}
+	
+	.skill-header__subtitle {
+		width: 100%;
+	}
+
+	.portfolio-header__function:not(:last-child) {
+    margin: 0 auto 20px;
+
+	}
+	.portfolio-header__function:last-child{
+		margin: 0 auto 20px;
+	}
+
+	}
+	.portfolio-header__function {
+    width: 40%;
+    
+}
+	.portfolio-header__icons {
+    
+    flex-direction: column;
+}
+
+
 /*jQuery*/
 .first{
  transform: translate(4px ) rotate(45deg);
@@ -831,5 +889,3 @@ transform: translate(-5px , -17px) rotate(-45deg);
 		font-size: 24px;
 	}
 }
-
-
