@@ -1,0 +1,20 @@
+@import "../../css/normilize.css";
+.section-inner {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media (max-width: 1199px) {
+  .section-outer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}

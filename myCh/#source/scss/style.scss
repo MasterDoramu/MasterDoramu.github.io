@@ -1,0 +1,62 @@
+@import "../../css/normilize.css";
+
+
+// <MIXINS>
+
+@mixin font-main{
+	font-family: 'Roboto', sans-serif;
+}
+
+
+//<VARIABLES>
+
+// size
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px;
+
+//color
+
+$main-color:#727272;
+$title-color:#000;
+$secondary-color:#fff;
+$form-color: #5F5D5D;
+
+//bg color
+
+$bg-odd-color:#EEEFF1;
+$bg-even-color:#E5E5E5;
+$bg-secondary-color:#34547A;
+
+
+
+//<COMMONS>
+
+.section-inner{
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.section-outer{
+	@media(max-width:$screen-lg-max ){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	@include font-main();
+}
+
+// <HEADER>
+
+
