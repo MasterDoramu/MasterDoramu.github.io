@@ -786,7 +786,9 @@ padding: 120px 0 135px;
 	background: #fff;
 }
 
-
+.header{
+	padding-top: 20px;
+}
 
 
 @media screen and (max-width: 480px) {
