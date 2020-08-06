@@ -1,10 +1,14 @@
-@import "../../css/normilize.css";
+@import "normalize";
 
 
 // <MIXINS>
 
 @mixin font-main{
 	font-family: 'Roboto', sans-serif;
+}
+
+@mixin font-logo{
+	font-family: 'Revalia', cursive;
 }
 
 
@@ -58,5 +62,10 @@ body{
 }
 
 // <HEADER>
-
+.header{
+	background-color: $bg-odd-color ;
+	&-wrapper{
+		
+	}
+}
 
