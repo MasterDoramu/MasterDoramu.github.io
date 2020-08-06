@@ -361,3 +361,71 @@ body {
 .header {
   background-color: #EEEFF1;
 }
+.header-wrapper {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-wrapper__logo {
+  font-family: "Revalia", cursive;
+  font-size: 48px;
+  color: #34547A;
+}
+.header-wrapper__nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 530px;
+  width: 100%;
+  padding-top: 20px;
+}
+.header-wrapper__nav-item {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  transition: 0.5s;
+}
+.header-wrapper__nav-item:hover {
+  color: #34547A;
+  font-size: 20px;
+}
+.header-container {
+  max-width: 1030px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 160px;
+}
+.header-container-wrapper {
+  max-width: 540px;
+  width: 100%;
+}
+.header-container-wrapper__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 79px;
+  color: #000;
+  text-transform: uppercase;
+}
+.header-container-wrapper__subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #727272;
+  margin-top: 50px;
+}
+.header-container-wrapper__button {
+  margin-top: 60px;
+  padding: 25px 40px;
+  background-color: #34547A;
+  width: 225px;
+  color: #fff;
+  text-transform: uppercase;
+}

@@ -11,6 +11,10 @@
 	font-family: 'Revalia', cursive;
 }
 
+@mixin trans{
+	transition: .5s;
+}
+
 
 //<VARIABLES>
 
@@ -30,6 +34,7 @@ $main-color:#727272;
 $title-color:#000;
 $secondary-color:#fff;
 $form-color: #5F5D5D;
+$hover-color:#34547A;
 
 //bg color
 
@@ -65,7 +70,80 @@ body{
 .header{
 	background-color: $bg-odd-color ;
 	&-wrapper{
-		
+		padding-top: 60px;	
+		display: flex;
+		justify-content: space-between;
+
+		&__logo{
+			@include font-logo();
+			font-size: 48px;
+			color: $hover-color;
+		}
+
+		&__nav{
+			display: flex;
+			justify-content: space-between;
+			max-width: 530px ;
+			width: 100%;
+			padding-top: 20px;
+
+			&-item{
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $title-color;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 26px;
+				letter-spacing: 0.1em;
+				@include trans();
+
+				&:hover{
+					color: $hover-color;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	&-container{
+		max-width: 1030px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		margin-top: 160px;
+
+		&-wrapper{
+			max-width: 540px;
+			width: 100%;
+
+			&__title{
+				font-style: normal;
+				font-weight: 500;
+				font-size: 48px;
+				line-height: 79px;
+				color:$title-color;
+				text-transform: uppercase;
+			}
+			&__subtitle{
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 26px;
+				color: $main-color;
+				margin-top: 50px;
+			}
+			&__button{
+				margin-top: 60px;
+				padding: 25px 40px;
+				background-color: $bg-secondary-color;
+				width: 225px;
+				color: $secondary-color;
+				text-transform: uppercase;
+			}
+
+		}
+
 	}
 }
 
