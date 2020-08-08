@@ -38,8 +38,8 @@ $hover-color:#34547A;
 
 //bg color
 
-$bg-odd-color:#EEEFF1;
-$bg-even-color:#E5E5E5;
+$bg-even-color:#EEEFF1;
+$bg-odd-color:#E5E5E5;
 $bg-secondary-color:#34547A;
 
 
@@ -64,6 +64,29 @@ $bg-secondary-color:#34547A;
 
 body{
 	@include font-main();
+}
+
+
+.page{
+	width:100%;
+	max-width: 540px;
+	margin: 0 auto;
+	text-align: center;
+	&__title{
+		font-style: normal;
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 37px;
+		color: $title-color;
+	}
+	&__subtitle{
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 26px;
+		color:$main-color;
+		margin-top: 50px;
+	}
 }
 
 // <HEADER>
@@ -111,7 +134,11 @@ body{
 		display: flex;
 		justify-content: space-between;
 		margin: 0 auto;
-		margin-top: 160px;
+		margin-top: 140px;
+
+		&__img{
+			margin-top: 40px;
+		}
 
 		&-wrapper{
 			max-width: 540px;
@@ -134,12 +161,20 @@ body{
 				margin-top: 50px;
 			}
 			&__button{
-				margin-top: 60px;
-				padding: 25px 40px;
-				background-color: $bg-secondary-color;
-				width: 225px;
-				color: $secondary-color;
-				text-transform: uppercase;
+				margin: 50px 0 150px;
+				
+				&-click{
+					padding: 25px 40px;
+					background-color: $bg-secondary-color;
+					width: 225px;
+					color: $secondary-color;
+					text-transform: uppercase;
+					outline: none;
+					border: none;
+					&:hover{
+						cursor: pointer;
+					}
+				}
 			}
 
 		}
@@ -147,3 +182,12 @@ body{
 	}
 }
 
+
+// ABOUT
+
+.about{
+	background: $bg-even-color;
+	&-wrapper{
+		padding-top: 120px;
+	}
+}
