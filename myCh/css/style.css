@@ -465,6 +465,101 @@ body {
 .about {
   background: #EEEFF1;
 }
-.about-wrapper {
-  padding-top: 120px;
+.about .section-inner {
+  max-width: 100%;
+}
+.about-page {
+  padding: 120px 0 100px;
+}
+.about-icons {
+  background: #34547A;
+  color: #fff;
+}
+.about-icons-wrapper {
+  padding: 100px 0;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.about-icons-wrapper__item {
+  display: flex;
+  max-width: 140px;
+  width: 100%;
+  justify-content: space-between;
+}
+.about-icons-wrapper__item-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-icons-wrapper__item-block-number {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+}
+.about-icons-wrapper__item-block-name {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+}
+.about-me {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.about-me-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.about-me-wrapper__skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 445px;
+  width: 100%;
+}
+.about-me-wrapper__skills-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  color: #000;
+}
+.about-me-wrapper__skills-stats {
+  padding-top: 50px;
+}
+.about-me-wrapper__skills-stats-name {
+  padding-top: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #727272;
+}
+.about-me-wrapper__skills-stats-line {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: #C4C4C4;
+}
+.about-me-wrapper__skills-stats-line:after {
+  content: "";
+  width: 75%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #34547A;
+}
+.about-me-wrapper__img-photo {
+  max-width: 550px;
+  width: 100%;
+  height: 450px;
 }
