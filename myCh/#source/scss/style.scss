@@ -96,7 +96,7 @@ body{
 // SLIDER
 
 .slider {
-  position: relative;
+
   overflow: hidden;
   width: 100%; 
   max-width:1200px;
@@ -114,9 +114,9 @@ body{
 	  
 	  &-work{
 	  	width: 100%
-	  	
-	  	
-
+	  }
+	  &-wrapper{
+	  	position: relative;
 	  }
 	}
 	/* СТИЛИ ДЛЯ КНОПОК "НАЗАД" И "ВПЕРЁД" */

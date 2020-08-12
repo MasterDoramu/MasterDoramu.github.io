@@ -403,6 +403,9 @@ body {
 .slider__item-work {
   width: 100%;
 }
+.slider__item-wrapper {
+  position: relative;
+}
 .slider__control {
   position: absolute;
   display: none;
