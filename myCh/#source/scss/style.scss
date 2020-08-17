@@ -43,10 +43,14 @@ $bg-odd-color:#E5E5E5;
 $bg-secondary-color:#34547A;
 $bg-line-color:#C4C4C4;
 
-
+// slider color
+$arrow-color:#2f3435;
 
 //<COMMONS>
-
+button{
+	border: none;
+	outline: none;
+}
 .section-inner{
 	margin: 0 auto;
 	max-width: 1200px;
@@ -93,87 +97,125 @@ body{
 
 
 
-// SLIDER
 
-.slider {
+// <SLIDER>
 
-  overflow: hidden;
-  width: 100%; 
-  max-width:1200px;
-  margin: 0 auto ;
-  
+// Слайдер
+.slick-slider{
 
+}
+// Ограничивающая оболочка
+.slick-list{
+overflow: hidden;
+margin: 0 auto;
+}
+// Лента слайдов
+.slick-track{
+display: flex;
+align-items: flex-start;
+}
+// Слайд
+.slick-slide{
 
-	&__wrapper {
-	  display: flex;
-	  transition: transform 0.6s ease; /* 0.6 длительность смены слайда в секундах */
-	}
-	&__item {
-	  flex: 0 0 100%; /* определяет количество активных слайдов (в данном случае 2 */
-	  max-width: 100%; /* определяет количество активных слайдов (в данном случае 2 */
-	  
-	  &-work{
-	  	width: 100%
-	  }
-	  &-wrapper{
-	  	position: relative;
-	  }
-	}
-	/* СТИЛИ ДЛЯ КНОПОК "НАЗАД" И "ВПЕРЁД" */
-	&__control {
-	  position: absolute;
-	  display: none;  
-	  top: 50%;
-	  transform: translateY(-50%);
-	  align-items: center;
-	  justify-content: center;
-	  text-align: center;
-	  width: 40px; /* ширина кнопки */
-	  height: 50px; /* высота кнопки */ 
-	  opacity: .5; /* прозрачность */
-	  background: #000; /* цвет фона */
+}
+// Слайд активный
+.slick-slide.slick-active{
+
+}
+// Слайд основной
+.slick-slide.slick-current{
+
+}
+// Слайд по центру
+.slick-slide.slick-center{
+
+}
+
+// Стилизуем стрелки под конкретный слайдер
+
+.slider{
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
 	
-		&_show {
-		  display: flex;
-		}
-		&:hover,
-		&:focus {
-		  text-decoration: none;
-		  outline: 0;
-		  opacity: .9; /* прозрачность */
-		}
-		&_left {
-		  left: 0;
-		}
-		&_right {
-		  right: 0;
-		}
-		&::before {
-		  content: '';
-		  display: inline-block;
-		  width: 20px; /* ширина иконки (стрелочки) */
-		  height: 20px; /* высота иконки (стрелочки) */
-		  background: transparent no-repeat center center;
-		  background-size: 100% 100%;
-		}
-		&_left::before {
-		  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-		}
-		&_right::before {
-		  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+	
+	.slick-arrow{
+		position: absolute;
+		top: 50%;
+		z-index: 10;	
+		font-size: 0;
+		width: 60px;
+		height: 90px;
+		/* половина от высоты */
+		margin-top:-45px; 
+		&:hover{
+			cursor: pointer;
 		}
 	}
+	.slick-arrow.slick-prev{
+		left:0;
+		background: url("../image/slider/left-arrow.svg") 0 0 / 100% no-repeat;
+	}
+	.slick-arrow.slick-next{
+		right:0;
+		background: url("../image/slider/right-arrow.svg") 0 0 / 100% no-repeat;
+	}
+	/* при отключенном инфинити делает стрелку 1 или посследнего 
+	сдайда не кликабельной */
+	.slick-arrow.slick-disabled{
+		opacity: 0.2;
+	}
+
+
 }
 
 
+// Стилизуем кнопки под конкретный слайдер
 
 
+.slider{
+	.slick-dots{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 0;
+		li{
+			list-style: none;
+			&:not(:last-child){
+				margin-right:20px;
+			}
+			
+			&.slick-active button{
+				background: $arrow-color ;
+			}
+		}
+		button{
+			font-size: 0;
+			width: 30px;
+			height: 30px;
+			
+			border-radius: 50%;
+			background: transparent;
+			border: 3px solid $arrow-color;
+		}
+	}
 
 
+}
+/* для слайд мод */
+.slider__item{
+	text-align: center;
+	
+	a{
+		cursor: default;
+	}
+	
 
-
-
-
+	&-img{
+		width: 100%;
+		max-width: 1200px;
+	}
+}
 
 
 
@@ -400,12 +442,14 @@ body{
 .work{
 	background: $bg-odd-color;
 
+
 	&-page{
 		padding-top: 100px;
 	}
 
 	&-slider{
 		padding: 60px 0 100px;
+
 	}
 }
 
