@@ -1,0 +1,455 @@
+@import "normalize";
+
+
+// <MIXINS>
+
+@mixin font-main{
+	font-family: 'Roboto', sans-serif;
+}
+
+@mixin font-logo{
+	font-family: 'Revalia', cursive;
+}
+
+@mixin trans{
+	transition: .5s;
+}
+
+
+//<VARIABLES>
+
+// size
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px;
+
+//color
+
+$main-color:#727272;
+$title-color:#000;
+$secondary-color:#fff;
+$form-color: #5F5D5D;
+$hover-color:#34547A;
+
+//bg color
+
+$bg-even-color:#EEEFF1;
+$bg-odd-color:#E5E5E5;
+$bg-secondary-color:#34547A;
+$bg-line-color:#C4C4C4;
+
+// slider color
+$arrow-color:#2f3435;
+
+//<COMMONS>
+button{
+	border: none;
+	outline: none;
+}
+.section-inner{
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.section-outer{
+	@media(max-width:$screen-lg-max ){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	@include font-main();
+}
+
+
+.page{
+	width:100%;
+	max-width: 540px;
+	margin: 0 auto;
+	text-align: center;
+	&__title{
+		font-style: normal;
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 37px;
+		color: $title-color;
+	}
+	&__subtitle{
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 26px;
+		color:$main-color;
+		margin-top: 50px;
+	}
+}
+
+
+
+
+
+// <SLIDER>
+
+// Слайдер
+.slick-slider{
+
+}
+// Ограничивающая оболочка
+.slick-list{
+overflow: hidden;
+margin: 0 auto;
+}
+// Лента слайдов
+.slick-track{
+display: flex;
+align-items: flex-start;
+}
+// Слайд
+.slick-slide{
+
+}
+// Слайд активный
+.slick-slide.slick-active{
+
+}
+// Слайд основной
+.slick-slide.slick-current{
+
+}
+// Слайд по центру
+.slick-slide.slick-center{
+
+}
+
+// Стилизуем стрелки под конкретный слайдер
+
+.slider{
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	
+	
+	.slick-arrow{
+		position: absolute;
+		top: 50%;
+		z-index: 10;	
+		font-size: 0;
+		width: 60px;
+		height: 90px;
+		/* половина от высоты */
+		margin-top:-45px; 
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	.slick-arrow.slick-prev{
+		left:0;
+		background: url("../image/slider/left-arrow.svg") 0 0 / 100% no-repeat;
+	}
+	.slick-arrow.slick-next{
+		right:0;
+		background: url("../image/slider/right-arrow.svg") 0 0 / 100% no-repeat;
+	}
+	/* при отключенном инфинити делает стрелку 1 или посследнего 
+	сдайда не кликабельной */
+	.slick-arrow.slick-disabled{
+		opacity: 0.2;
+	}
+
+
+}
+
+
+// Стилизуем кнопки под конкретный слайдер
+
+
+.slider{
+	.slick-dots{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 0;
+		li{
+			list-style: none;
+			&:not(:last-child){
+				margin-right:20px;
+			}
+			
+			&.slick-active button{
+				background: $arrow-color ;
+			}
+		}
+		button{
+			font-size: 0;
+			width: 30px;
+			height: 30px;
+			
+			border-radius: 50%;
+			background: transparent;
+			border: 3px solid $arrow-color;
+		}
+	}
+
+
+}
+/* для слайд мод */
+.slider__item{
+	text-align: center;
+	
+	a{
+		cursor: default;
+	}
+	
+
+	&-img{
+		width: 100%;
+		max-width: 1200px;
+	}
+}
+
+
+
+// <HEADER>
+.header{
+	background-color: $bg-odd-color ;
+	&-wrapper{
+		padding-top: 60px;	
+		display: flex;
+		justify-content: space-between;
+
+		&__logo{
+			@include font-logo();
+			font-size: 48px;
+			color: $hover-color;
+		}
+
+		&__nav{
+			display: flex;
+			justify-content: space-between;
+			max-width: 530px ;
+			width: 100%;
+			padding-top: 20px;
+
+			&-item{
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $title-color;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 26px;
+				letter-spacing: 0.1em;
+				@include trans();
+
+				&:hover{
+					color: $hover-color;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	&-container{
+		max-width: 1030px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		margin-top: 140px;
+
+		&__img{
+			margin-top: 40px;
+		}
+
+		&-wrapper{
+			max-width: 540px;
+			width: 100%;
+
+			&__title{
+				font-style: normal;
+				font-weight: 500;
+				font-size: 48px;
+				line-height: 79px;
+				color:$title-color;
+				text-transform: uppercase;
+			}
+			&__subtitle{
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 26px;
+				color: $main-color;
+				margin-top: 50px;
+			}
+			&__button{
+				margin: 50px 0 150px;
+				
+				&-click{
+					padding: 25px 40px;
+					background-color: $bg-secondary-color;
+					width: 225px;
+					color: $secondary-color;
+					text-transform: uppercase;
+					outline: none;
+					border: none;
+					&:hover{
+						cursor: pointer;
+					}
+				}
+			}
+
+		}
+
+	}
+}
+
+
+// ABOUT
+
+.about{
+	background: $bg-even-color;
+
+	.section-inner{
+		max-width: 100%;
+	}
+	&-page{
+		padding: 120px 0 100px;
+	}
+
+	&-icons{
+		background: $bg-secondary-color;
+		color: $secondary-color;
+		
+
+		&-wrapper{
+			padding: 100px 0;
+			width:100%;
+			max-width: 1100px;
+			display: flex;
+			justify-content: space-between;
+			margin: 0 auto;
+
+			&__item{
+				display: flex;
+				max-width: 140px;
+				width: 100%;
+				justify-content: space-between;
+
+				&-block{
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+
+					&-number{
+						font-style: normal;
+						font-weight: 500;
+						font-size: 21px;
+						line-height: 25px;
+					}
+
+					&-name{
+						font-style: normal;
+						font-weight: normal;
+						font-size: 16px;
+						line-height: 26px;
+					}
+				}
+			}
+		}
+	}
+
+
+	&-me{
+		max-width: 1150px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 100px 0;
+
+		&-wrapper{
+			display: flex;
+			justify-content: space-between;
+			
+			&__skills{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				max-width: 445px;
+				width: 100%;
+
+				&-title{
+					font-style: normal;
+					font-weight: 500;
+					font-size: 32px;
+					line-height: 37px;
+					color: $title-color;
+					
+				}
+
+				&-stats{
+					padding-top: 50px;
+
+					&-name{
+						padding-top: 30px;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 16px;
+						line-height: 26px;
+						color: $main-color;
+					}
+
+					&-line{
+						margin-top: 20px;
+						position: relative;
+						width: 100%;
+						height: 4px;
+						background: $bg-line-color;
+
+						&:after{
+							content: "";
+							width: 75%;
+							height: 4px;
+							position: absolute;
+							left: 0;
+							top: 0;
+							bottom: 0;
+							background: $bg-secondary-color;
+						}
+					}
+				}
+			}
+
+			&__img-photo{
+				max-width: 550px;
+				width: 100%;
+				height: 450px;
+			}
+		}
+	}
+}
+
+
+// WORKS
+
+.work{
+	background: $bg-odd-color;
+
+
+	&-page{
+		padding-top: 100px;
+	}
+
+	&-slider{
+		padding: 60px 0 100px;
+
+	}
+}
+
