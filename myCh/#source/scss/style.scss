@@ -293,6 +293,7 @@ align-items: flex-start;
 			@include font-logo();
 			font-size: 48px;
 			color: $hover-color;
+			margin-right: 20px;
 		}
 
 		&__nav{
@@ -301,7 +302,10 @@ align-items: flex-start;
 			max-width: 530px ;
 			width: 100%;
 			padding-top: 20px;
-
+			@media(max-width:$screen-sm-max ){
+					flex-wrap: wrap;
+				}
+			
 			&-item{
 				text-transform: uppercase;
 				text-decoration: none;
@@ -312,7 +316,8 @@ align-items: flex-start;
 				line-height: 26px;
 				letter-spacing: 0.1em;
 				@include trans();
-
+				margin-right: 10px;
+				
 				&:hover{
 					color: $hover-color;
 					font-size: 20px;

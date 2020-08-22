@@ -521,6 +521,7 @@ textarea {
   font-family: "Revalia", cursive;
   font-size: 48px;
   color: #34547A;
+  margin-right: 20px;
 }
 .header-wrapper__nav {
   display: flex;
@@ -528,6 +529,11 @@ textarea {
   max-width: 530px;
   width: 100%;
   padding-top: 20px;
+}
+@media (max-width: 767px) {
+  .header-wrapper__nav {
+    flex-wrap: wrap;
+  }
 }
 .header-wrapper__nav-item {
   text-transform: uppercase;
@@ -539,6 +545,7 @@ textarea {
   line-height: 26px;
   letter-spacing: 0.1em;
   transition: 0.5s;
+  margin-right: 10px;
 }
 .header-wrapper__nav-item:hover {
   color: #34547A;
