@@ -54,4 +54,24 @@ $(".slider").slick({
 	appendArrows:$(".slider"),
 	appendDots:$(".slider"),
 });
+
+
+
+
+
+
+
+$(".header-wrapper__nav").on("click","a", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1000);
+	});
+
+$(".header-container-wrapper__button").on("click","button", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1000);
+	});
 });
