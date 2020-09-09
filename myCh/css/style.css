@@ -517,11 +517,22 @@ textarea {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 767px) {
+  .header-wrapper {
+    flex-direction: column;
+  }
+}
 .header-wrapper__logo {
   font-family: "Revalia", cursive;
   font-size: 48px;
   color: #34547A;
   margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .header-wrapper__logo {
+    text-align: center;
+    padding-bottom: 40px;
+  }
 }
 .header-wrapper__nav {
   display: flex;
@@ -532,7 +543,8 @@ textarea {
 }
 @media (max-width: 767px) {
   .header-wrapper__nav {
-    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 100%;
   }
 }
 .header-wrapper__nav-item {
@@ -547,9 +559,21 @@ textarea {
   transition: 0.5s;
   margin-right: 10px;
 }
+@media (max-width: 767px) {
+  .header-wrapper__nav-item {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+  }
+}
 .header-wrapper__nav-item:hover {
   color: #34547A;
-  font-size: 20px;
+  font-size: 1.4em;
+}
+@media (max-width: 767px) {
+  .header-wrapper__nav-item:hover {
+    font-size: 2em;
+  }
 }
 .header-container {
   max-width: 1030px;

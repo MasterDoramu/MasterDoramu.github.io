@@ -288,12 +288,19 @@ align-items: flex-start;
 		padding-top: 60px;	
 		display: flex;
 		justify-content: space-between;
+		@media(max-width:$screen-sm-max ){
+			flex-direction: column;
+		}
 		
 		&__logo{
 			@include font-logo();
 			font-size: 48px;
 			color: $hover-color;
 			margin-right: 20px;
+			@media(max-width:$screen-sm-max ){
+				text-align: center;
+				padding-bottom:40px;
+			}
 		}
 
 		&__nav{
@@ -303,7 +310,8 @@ align-items: flex-start;
 			width: 100%;
 			padding-top: 20px;
 			@media(max-width:$screen-sm-max ){
-					flex-wrap: wrap;
+					flex-direction: column;
+					max-width: 100%;
 				}
 			
 			&-item{
@@ -317,10 +325,18 @@ align-items: flex-start;
 				letter-spacing: 0.1em;
 				@include trans();
 				margin-right: 10px;
+                @media(max-width:$screen-sm-max ){
+					font-size: 20px;
+					text-align: center;
+					margin-top: 25px;
+				}
 				
 				&:hover{
 					color: $hover-color;
-					font-size: 20px;
+					font-size: 1.4em;
+	                @media(max-width:$screen-sm-max ){
+						font-size: 2em;
+					}
 				}
 			}
 		}
