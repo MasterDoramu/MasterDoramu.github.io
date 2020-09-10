@@ -126,6 +126,7 @@ $screen-lg-max: 1199px;
 			font-size: 100px;
 		}
 		@media(max-width:$screen-sm ){	
+			padding-top:80px;
 			padding-left:5%;
 			font-size: 60px;
 			letter-spacing: -5px;
