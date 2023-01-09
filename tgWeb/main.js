@@ -4,7 +4,7 @@ tg.expand();
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
 tg.MainButton.setText("Отправить на бэк");
-tg.MainButton.show();
+tg.MainButton.isVisible = true;
 const el1 = document.getElementById('test1')
 const el2 = document.getElementById('test2')
 
