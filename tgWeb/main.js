@@ -1,7 +1,10 @@
 const tg = window.Telegram.WebApp;
 
 tg.expand();
-
+tg.MainButton.textColor = "#FFFFFF";
+tg.MainButton.color = "#2cab37";
+tg.MainButton.setText("Отправить на бэк");
+tg.MainButton.show();
 const el1 = document.getElementById('test1')
 const el2 = document.getElementById('test2')
 
